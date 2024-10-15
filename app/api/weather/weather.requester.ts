@@ -8,7 +8,6 @@ export class WeatherRequester {
   }
 
   async fetchWeather(lat: string, lon: string): Promise<WeatherDto> {
-    console.log(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${this.apiKey}`);
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${this.apiKey}&units=metric`);
 
     if (!response.ok) {
