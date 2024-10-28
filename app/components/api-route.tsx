@@ -14,13 +14,13 @@ export default function ApiRoute({ query }: { query: string }) {
     fetcher
   );
 
-  const handleFetchClick = () => {
+  const fetchWeather = () => {
     setSubmittedQuery(query);
   };
 
   return (
     <div className="flex flex-col items-center w-full max-w-md">
-      <button onClick={handleFetchClick} className="px-4 py-2 mb-4 bg-blue-600 rounded-md">
+      <button onClick={fetchWeather} className="px-4 py-2 mb-4 bg-blue-600 rounded-md">
         Fetch via API route
       </button>
       <WeatherCard weather={weather} error={error} isLoading={isLoading} />
